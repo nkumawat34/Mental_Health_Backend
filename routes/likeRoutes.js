@@ -6,6 +6,6 @@ const authenticate=require('../middleware/authenticate')
 router.post('/:storyId/like',authenticate ,addLike);
 
 // Delete a like from a mental health story
-router.delete('/:storyId/like/:userId',authenticate,deleteLike);
+router.delete('/:storyId/like/:userId',deleteLike);
 
 module.exports = router;
