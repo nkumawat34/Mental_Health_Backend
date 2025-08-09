@@ -60,17 +60,5 @@ const registerUser = async (req, res) => {
 
 
 
-// GET /users
-const getUsers = async (req, res) => {
-  try {
-    const users = await User.find().select('-password');
-    res.status(200).json(users);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-};
 
-
-
-
-module.exports = { loginUser, registerUser,getUsers };
+module.exports = { loginUser, registerUser };
